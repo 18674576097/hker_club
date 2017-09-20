@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%import 'bootstrap/wtf.html' as wtf%}
+{% block title %}Hker_Club - Change Email{% endblock %}
+
+{% block content %}
+<div class="container col-lg-3 col-lg-offset-4">
+<div class="page-header">
+    <h1>Change Your Email</h1>
+</div>
+{#<div class="col-md-4">#}
+    {%for message in get_flashed_messages()%}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{message}}
+            </div>
+        {%endfor%}
+    {{ wtf.quick_form(form) }}
+{#</div>#}
+</div>
+{% endblock %}
